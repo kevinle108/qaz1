@@ -14,7 +14,7 @@ const rcRaceHtml = `
       {CONTEST_NAME}<br>{CONTEST_SUBTITLE}
       <p class="votingInstructions">{VOTING_INSTRUCTIONS}</p>
     </h2>    
-    <table class="table">
+    <table class="table" aria-describedby="contest_{CONTEST_INDEX}">
       <tr class="row header">
           <th scope="col" class="cell">Candidate</th> 
           {RANKS}
