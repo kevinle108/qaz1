@@ -8,13 +8,14 @@ function buildLocalTitle(header) {
                    .replace("{LOCAL_HEADER}", header)  
 }
 
+// aria-label="{CONTEST_NAME} {CONTEST_SUBTITLE} {VOTING_INSTRUCTIONS}""
 const rcRaceHtml = `
   <div class="selectionContest">
     <h2 id="contest_{CONTEST_INDEX}" class="contestName" tabindex="0">
       {CONTEST_NAME}<br>{CONTEST_SUBTITLE}
       <p class="votingInstructions">{VOTING_INSTRUCTIONS}</p>
     </h2>    
-    <table class="table" aria-describedby="contest_{CONTEST_INDEX}">
+    <table class="table" aria-labelledby="contest_{CONTEST_INDEX}">
       <tr class="row header">
           <th scope="col" class="cell">Candidate</th> 
           {RANKS}
