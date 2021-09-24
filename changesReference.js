@@ -1,13 +1,3 @@
-const localTitle = `
-<hr class="separatorLine">
-<h2 class="localHeader" aria-label="{HEADER_LABEL}">{LOCAL_HEADER}</h2><br>`
-
-function buildLocalTitle(header) { 
-  let headerLabel = header.replace(/<br>/g," ")  
-  return localTitle.replace("{HEADER_LABEL}", headerLabel)
-                   .replace("{LOCAL_HEADER}", header)  
-}
-
 const rcRaceHtml = `
   <div class="selectionContest">
     <h2 id="contest_{CONTEST_INDEX}" class="contestName" tabindex="0">
@@ -57,10 +47,10 @@ const rcWriteinHtml = `
 ` 
 
 const ovalHtml = `
-  <td class="cell">
+  <td class="cell" role="cell">
 	<label>
-  <input id="{OVAL_ID}" type="checkbox" class="rcOval" aria-label="{OVAL_ARIA_LABEL}">
-  <span class="rcCheckmark" aria-hidden="true"></span>
+      <input id="{OVAL_ID}" type="checkbox" class="rcOval" aria-label="{OVAL_ARIA_LABEL}">
+      <span class="rcCheckmark" aria-hidden="true"></span>
 	</label>
   </td>
 `
@@ -204,7 +194,7 @@ function buildRankChoiceRace(race, raceIndex) {
 }
 
 function buildRankHeaders(race) {
-  const headerHtml = `<th class="cell">{RANK}<br>Choice</th>`; //scope="col"
+  const headerHtml = '<th class="cell">{RANK}<br aria-hidden="true"/> Choice</th>'; //scope="col"
   let html = '';
   let rank = 1;
   race.candidates.forEach(candidate => {
