@@ -61,7 +61,7 @@ const ovalHtml = `
   <td class="cell">
     <label>
       <input id="{OVAL_ID}" type="checkbox" class="rcOval" aria-label="{OVAL_ARIA_LABEL}">
-      <span class="rcCheckmark" aria-hidden="true"/span>
+      <span class="rcCheckmark" aria-hidden="true"/>
     </label>    
   </td>
 `
@@ -205,7 +205,7 @@ function buildRankChoiceRace(race, raceIndex) {
 }
 
 function buildRankHeaders(race) {
-  const headerHtml = `<th class="cell">{RANK}<br>Choice</th>`; //scope="col"
+  const headerHtml = `<th class="cell">{RANK}<br aria-hidden="true">Choice</th>`; //scope="col"
   let html = '';
   let rank = 1;
   race.candidates.forEach(candidate => {
