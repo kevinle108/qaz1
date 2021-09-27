@@ -28,8 +28,7 @@ const rRaceHtml = `
     <h2 id="contest_{CONTEST_INDEX}" class="contestName" tabindex="0">
       {CONTEST_NAME}<br>{CONTEST_SUBTITLE}
       <p class="votingInstructions">{VOTING_INSTRUCTIONS}</p>         
-    </h2>
-     
+    </h2>     
     <div class="regCandidates">
       {CANDIDATES}
     </div>
@@ -203,12 +202,9 @@ function buildRankChoiceRace(race, raceIndex) {
 }
 
 function buildRankHeaders(race) {
-  const headerHtml = `<th class="cell choice" aria-label="{RANK} Choice"><div style="max-width:50px; text-align:center; margin: 0 auto;">{RANK} Choice</div></th>`; //scope="col"
-  // const headerHtml = `
-  // <th class="cell" aria-label="{RANK} Choice">
-  //     <div>{RANK}<br aria-hidden="true"/>Choice</div>
-  // </th>`;
-
+  const headerHtml = `<th class="cell">
+    <div class="choice">{RANK} Choice</div>
+  </th>`;
   let html = '';
   let rank = 1;
   race.candidates.forEach(candidate => {

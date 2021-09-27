@@ -27,6 +27,12 @@ body {
     background-color: whitesmoke;
 }
 
+.choice {
+    max-width: 50px; 
+    text-align: center; 
+    margin: 0 auto;
+}
+
 section {
     text-align: center;
 }
@@ -209,7 +215,7 @@ ol, ul {
 
 #affidavitPage, #howToVote {
     margin: 0 auto 50px;
-    width: 60%;//800px;
+    width: 60%;
 	font-size: 22px;
 }
 
@@ -235,7 +241,7 @@ td > .container {
 }
 
 .reviewContest {
-    width: 60%; //800px;
+    width: 60%;
     text-align: center;
     background-color:whitesmoke;
     padding: 20px;
@@ -250,9 +256,9 @@ td > .container {
     background-color: #CCC;
 }
 
-.reviewContest:focus {
-    //background-color: #CCC;
-}
+/* .reviewContest:focus {
+    background-color: #CCC;
+} */
 
 
 /*.reviewContestButton {
@@ -261,7 +267,7 @@ td > .container {
 }*/
 
 #reviewPageInstructions {
-    width: 60%; //800px;
+    width: 60%;
     margin: 20px auto;    
     padding: 20px;
 }
@@ -469,7 +475,7 @@ button:hover {
 }
 
 .step {
-    width: 98%; //1200px;
+    width: 98%;
     border: 2px solid black;
     margin: 20px auto;
     background-color: white;
@@ -486,7 +492,7 @@ button:hover {
 
 .table,.regCandidates, .questionDiv {
     margin: 0 auto 30px;	
-    width: 60%; //800px;
+    width: 60%;
     display: table;
     border: 1px solid black;
 	border-collapse:collapse;
