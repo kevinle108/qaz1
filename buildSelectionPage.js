@@ -203,7 +203,7 @@ function buildRankChoiceRace(race, raceIndex) {
 }
 
 function buildRankHeaders(race) {
-  const headerHtml = `<th class="cell" aria-label="{RANK} Choice">{RANK}<br aria-hidden="true">Choice</th>`; //scope="col"
+  const headerHtml = `<th class="cell" aria-label="{RANK} Choice">{RANK}<br aria-hidden="true"/>Choice</th>`; //scope="col"
   // const headerHtml = `
   // <th class="cell" aria-label="{RANK} Choice">
   //     <div>{RANK}<br aria-hidden="true"/>Choice</div>
