@@ -8,7 +8,6 @@ function buildLocalTitle(header) {
                    .replace("{LOCAL_HEADER}", header)  
 }
 
-// aria-label="{CONTEST_NAME} {CONTEST_SUBTITLE} {VOTING_INSTRUCTIONS}""
 const rcRaceHtml = `
   <div class="selectionContest">
     <h2 id="contest_{CONTEST_INDEX}" class="contestName" tabindex="0">
@@ -133,7 +132,6 @@ function buildRegRace(race, raceIndex) {
     .replace(/{VOTING_INSTRUCTIONS}/g, race.votingInstructions)
     .replace(/{VOTE_LIMIT}/g, race.voteFor)
     .replace(/{CANDIDATES}/g, buildRegCandidates(race, raceIndex))
-  // console.log(txt)
   return txt
 }
 
@@ -205,11 +203,11 @@ function buildRankChoiceRace(race, raceIndex) {
 }
 
 function buildRankHeaders(race) {
-  const headerHtml = `<th class="cell">{RANK}<br aria-hidden="true">Choice</th>`; //scope="col"
+  const headerHtml = `<th class="cell" aria-label="{RANK} Choice">{RANK}<br aria-hidden="true">Choice</th>`; //scope="col"
   let html = '';
   let rank = 1;
   race.candidates.forEach(candidate => {
-    html += headerHtml.replace('{RANK}', choiceLabel(rank));
+    html += headerHtml.replace(/{RANK}/g, choiceLabel(rank));
     rank++;
   })
   return html;
@@ -286,8 +284,6 @@ function candidateInfoString(raceIndex, candidateIndex) {
     const candidate = ballot.contests[raceIndex].candidates[candidateIndex]
     let candidateName = '';
     if (candidate.candidateCode.includes('writein')) {
-      // const writeinId = raceIndex + "_" + candidateIndex + "_w";
-      // console.log(document.getElementById(writeinId));
       candidateName = "Write-in:";
     }
     else {
