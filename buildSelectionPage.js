@@ -104,28 +104,33 @@ const ovalHtml = `
 
 const candidateRegLine = `
   <div class="indivCandidate" >
-      <div class="candidateNameDiv" aria-hidden="true">
-        <div class="candidateName">{CANDIDATE_NAME}</div>
-        <span class="candidateSubtitle">{CANDIDATE_SUBTITLE}</span>        
-      </div>
-      <input type="checkbox" id="{OVAL_ID}" class="c2" aria-label="{CANDIDATE_ARIA_LABEL}">
-    
+    <div class="candidateNameDiv" aria-hidden="true">
+      <div class="candidateName">{CANDIDATE_NAME}</div>
+      <span class="candidateSubtitle">{CANDIDATE_SUBTITLE}</span>        
+    </div>
+    <input type="checkbox" id="{OVAL_ID}" class="c2 regularRaceOval" aria-label="{CANDIDATE_ARIA_LABEL}">    
   </div>
 `
-
-
-
 const candidateRegWriteIn = `
   <div class="indivCandidate">
-    <label class="container candidateLabel" for="{OVAL_ID}" aria-label="quack">
-      <div id="{OVAL_ID}_wh" class="candidateName" aria-hidden="true">Write-in:</div>
-      <div id="{OVAL_ID}_w" class="writeinName" aria-hidden="true"></div>
-      <input type="checkbox" id="{OVAL_ID}" class="regularRaceOval" aria-label="{WRITEIN_ARIA_LABEL}">
-      12332
-      <span class="checkmark ballotCheckbox" aria-hidden="true" ></span>
-    </label>
+    <div id="{OVAL_ID}_wh" class="candidateName" aria-hidden="true">Write-in:</div>
+    <div id="{OVAL_ID}_w" class="writeinName" aria-hidden="true"></div>
+    <input type="checkbox" id="{OVAL_ID}" class="c2 regularRaceOval" aria-label="{WRITEIN_ARIA_LABEL}">
   </div>
 `
+
+// Original reg writein
+// const candidateRegWriteIn = `
+//   <div class="indivCandidate">
+//     <label class="container candidateLabel" for="{OVAL_ID}">
+//       <div id="{OVAL_ID}_wh" class="candidateName" aria-hidden="true">Write-in:</div>
+//       <div id="{OVAL_ID}_w" class="writeinName" aria-hidden="true"></div>
+//       <input type="checkbox" id="{OVAL_ID}" class="regularRaceOval" aria-label="{WRITEIN_ARIA_LABEL}">
+//       12332
+//       <span class="checkmark ballotCheckbox" aria-hidden="true" ></span>
+//     </label>
+//   </div>
+// `
 
 const qRaceHtml = `
   <div class="selectionContest">

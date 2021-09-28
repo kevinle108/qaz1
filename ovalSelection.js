@@ -53,6 +53,7 @@ function clearRegWriteinAria(id) {
 
 function regularHandler(event) {	
     const ovalId = event.target.id
+    console.log(ovalId)
     const split = ovalId.split('_')
     const contestIndex = split[0] 
     const candidateIndex = split[1]
