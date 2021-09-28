@@ -57,10 +57,7 @@ const rcWriteinHtml = `
 
 const ovalHtml = `
   <td class="cell">
-    <label>
-      <input id="{OVAL_ID}" type="checkbox" class="rcOval" aria-label="{OVAL_ARIA_LABEL}">
-      <span class="rcCheckmark" aria-hidden="true"/>
-    </label>    
+    <input type="checkbox" id="{OVAL_ID}" class="c2 rcOval" aria-label="{OVAL_ARIA_LABEL}">      
   </td>
 `
 

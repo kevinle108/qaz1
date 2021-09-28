@@ -541,13 +541,13 @@ button:hover {
     text-align: center;
 }
 
-.rcOval {
+/* .rcOval {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0px;
     width: 0px;
-}
+} */
 
 /* Create a custom checkbox */
 .rcCheckmark {
