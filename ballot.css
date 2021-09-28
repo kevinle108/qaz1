@@ -80,6 +80,9 @@ h1:focus, h2:focus, h3:focus, #inputsWrap_AffidavitPage input:focus {
    background-color: black;
  }
 
+ input:hover::after {
+    background-color: #BBB
+}
 
 /* CUSTOM CHECKBOX */
 /* The container */
