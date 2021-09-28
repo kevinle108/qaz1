@@ -29,7 +29,8 @@ function initPage() {
 
     let rc = document.querySelectorAll('.rcOval')	
     rc.forEach(checkbox => checkbox.addEventListener('click', rankChoiceHandler))
-	
+
+
 	document.querySelector('#signedby').addEventListener('keypress', function (e) {
 		if (e.key === 'Enter') {			
 			processPassword()	
@@ -52,11 +53,9 @@ function initPage() {
 
 function processPassword() {
 	const passwordEle = document.getElementById('signedby');
-	var md = forge.md.sha256.create();  
-	md.start();  
-	md.update('IVS' + passwordEle.value, "utf8");  
-	var hashPassword = md.digest().toHex();        	  
-	if (hashPassword === myPassword) {
+   	  
+	if (passwordEle.value === '123') {
+		console.log('inside')
 		createPDF();
 		document.querySelector('main').innerHTML = `
 			<div id="center">
