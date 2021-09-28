@@ -63,44 +63,6 @@ const ovalHtml = `
     </label>    
   </td>
 `
-// working aria-label
-// const candidateRegLine = `
-//   <div class="indivCandidate" aria-label="{CANDIDATE_ARIA_LABEL}">
-//       <div class="candidateNameDiv" aria-hidden="true">
-//         <div class="candidateName" aria-label="{CANDIDATE_HEADER_ARIA}" aria-hidden="true">{CANDIDATE_NAME}</div>
-//         <span class="candidateSubtitle" aria-hidden="true">{CANDIDATE_SUBTITLE}</span>        
-//       </div>
-//       <input type="checkbox" class="c2 checkbox" aria-label="{CANDIDATE_ARIA_LABEL}"/>
-//   </div>
-// `
-
-// original code for custom checkbox
-// const candidateRegLine = `
-//   <div class="indivCandidate">
-//     <label class="container candidateLabel" id="label_{OVAL_ID}">
-//       <div class="candidateNameDiv" aria-hidden="true">
-//         <div class="candidateName" aria-label="{CANDIDATE_HEADER_ARIA}" aria-hidden="true">{CANDIDATE_NAME}</div>
-//         <span class="candidateSubtitle" aria-hidden="true">{CANDIDATE_SUBTITLE}</span>        
-//       </div>
-//       <input type="checkbox" id="{OVAL_ID}" class="regularRaceOval" aria-label="{CANDIDATE_ARIA_LABEL}">
-//       <span class="checkmark ballotCheckbox" aria-hidden="true"></span>           
-//     </label>
-//   </div>
-// `
-
-// working checkboxes but not linked to mouse click
-// const candidateRegLine = `
-//   <div class="indivCandidate" >
-//       <div class="candidateNameDiv" aria-hidden="true">
-//         <div class="candidateName">{CANDIDATE_NAME}</div>
-//         <span class="candidateSubtitle">{CANDIDATE_SUBTITLE}</span>        
-//       </div>
-//       <div class="container candidateLabel">
-//         <input type="checkbox" id="{OVAL_ID}" class="regularRaceOval" aria-label="{CANDIDATE_ARIA_LABEL}">
-//         <span class="checkmark ballotCheckbox" aria-hidden="true"></span>
-//       </div>      
-//   </div>
-// `
 
 const candidateRegLine = `
   <div class="indivCandidate" >
@@ -119,19 +81,6 @@ const candidateRegWriteIn = `
   </div>
 `
 
-// Original reg writein
-// const candidateRegWriteIn = `
-//   <div class="indivCandidate">
-//     <label class="container candidateLabel" for="{OVAL_ID}">
-//       <div id="{OVAL_ID}_wh" class="candidateName" aria-hidden="true">Write-in:</div>
-//       <div id="{OVAL_ID}_w" class="writeinName" aria-hidden="true"></div>
-//       <input type="checkbox" id="{OVAL_ID}" class="regularRaceOval" aria-label="{WRITEIN_ARIA_LABEL}">
-//       12332
-//       <span class="checkmark ballotCheckbox" aria-hidden="true" ></span>
-//     </label>
-//   </div>
-// `
-
 const qRaceHtml = `
   <div class="selectionContest">
     <h2 id="contest_{CONTEST_INDEX}" class="contestName" tabindex="0">
@@ -148,12 +97,11 @@ const qRaceHtml = `
 `
 
 const questionOption = `
-  <div class="questionOption">
-    <label class="container candidateLabel">      
-      <div class="candidateName" aria-hidden="true">{CANDIDATE_NAME}</div>
-      <input id="{OVAL_ID}" type="checkbox" class="questionRaceOval" aria-label="{OPTION_ARIA_LABEL}">
-      <span class="checkmark ballotCheckbox" aria-hidden="true"></span>
-    </label>
+  <div class="questionOption candidateLabel">
+    <div class="candidateNameDiv" aria-hidden="true">
+      <div class="candidateName">{CANDIDATE_NAME}</div>
+    </div>
+    <input type="checkbox" id="{OVAL_ID}" class="c2 regularRaceOval" aria-label="{CANDIDATE_ARIA_LABEL}">  
   </div>
 `
 
