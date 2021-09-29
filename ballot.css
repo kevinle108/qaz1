@@ -637,5 +637,8 @@ button:hover {
     .reviewCandidates {
         margin: 0px auto;
     }
+    .cell {
+        padding: 8px;
+    }
     
 }   
