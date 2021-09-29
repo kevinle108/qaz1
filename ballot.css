@@ -28,7 +28,7 @@ body {
 }
 
 .choice {
-    max-width: 60px; 
+    width: 60px; 
     text-align: center; 
     margin: 0 auto;
 }
