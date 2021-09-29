@@ -98,7 +98,7 @@ const questionOption = `
     <div class="candidateNameDiv" aria-hidden="true">
       <div class="candidateName">{CANDIDATE_NAME}</div>
     </div>
-    <input type="checkbox" id="{OVAL_ID}" class="c2 questionOval" aria-label="{CANDIDATE_NAME}">  
+    <input type="checkbox" id="{OVAL_ID}" class="c2 questionRaceOval" aria-label="{CANDIDATE_NAME}">  
   </div>
 `
 
