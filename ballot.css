@@ -60,7 +60,7 @@ h1:focus, h2:focus, h3:focus, #inputsWrap_AffidavitPage input:focus {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    border-radius: 0px;    
+    border: none;   
  }
  
  .c2::after{
