@@ -544,6 +544,10 @@ button:hover {
     text-align: center;
 }
 
+tbody {
+    border: 2px solid black;
+}
+
 /* .rcOval {
     position: absolute;
     opacity: 0;

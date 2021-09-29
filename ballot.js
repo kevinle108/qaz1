@@ -67,6 +67,7 @@ function processPassword() {
 		document.getElementById('thankyouForVoting').scrollIntoView();      }
 	else {		
 		showModal('pwModal', 'signedby')
+		passwordEle.value = ''
 	}
 }
 
