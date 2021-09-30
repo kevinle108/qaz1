@@ -98,7 +98,7 @@ const questionOption = `
     <div class="candidateNameDiv" aria-hidden="true">
       <div class="candidateName">{CANDIDATE_NAME}</div>
     </div>
-    <input type="checkbox" id="{OVAL_ID}" class="c2 questionRaceOval" aria-label="{CANDIDATE_NAME}">  
+    <input type="checkbox" id="{OVAL_ID}" class="c2 questionRaceOval" aria-label="{OPTION_ARIA_LABEL}">  
   </div>
 `
 
@@ -160,7 +160,8 @@ function buildOptionAriaLabel(raceIndex, candidateIndex) {
   // txt += 'This is a ballot question. '
   // txt += ballot.contests[raceIndex].contestName + '. '
   // txt += 'Option ' + (candidateIndex + 1) + ' of ' + ballot.contests[raceIndex].candidates.length + ': '
-  txt += ballot.contests[raceIndex].candidates[candidateIndex].candidateName
+  txt += ballot.contests[raceIndex].candidates[candidateIndex].candidateName + ' for ' + ballot.contests[raceIndex].contestName
+  console.log(txt)
   return txt
 }
 
